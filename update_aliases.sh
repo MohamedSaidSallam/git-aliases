@@ -24,7 +24,5 @@ do
     command=${command//\\n/\\\\n}
     aliasText=${line%"= $quotedCommand"}
 
-    echo $command
-
     printf '%s\n' "git config --global alias.$aliasText \$'$command'" >> $tempFile
 done
