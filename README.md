@@ -123,7 +123,7 @@ Parameters:
 Expanded:
 
 ```bash
-!f() { git stash && git um && git co -tb $1 && git stash pop && git add . && git ci -m '${1}: ${2}' -m '' -m '${3:-desc}' && git ci --amend; } ; f
+"!f() { git stash && git um && git co -tb \"$1\" && git stash pop && git add . && git ci -m \"${1}: ${2}\" -m '' -m \"${3:-desc}\"; } ; f"
 ```
 
 Buckle Up!
@@ -134,7 +134,6 @@ Buckle Up!
 4. pop stash
 5. add all
 6. commit using parameters
-7. start an amend for the user to edit the commit message
 
 #### git lc
 

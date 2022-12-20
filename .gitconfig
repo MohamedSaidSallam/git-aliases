@@ -33,7 +33,7 @@
     lsa  = "!git lsa-raw  | awk -F= '{first=$1;$1=\"\";printf(\"%-12s %s\\n\",first,$0);}'"
     lsal = "!git lsa-raw  | awk -F= '{first=$1;$1=\"\";printf(\"%12s %s\\n\",first,$0);}'"
 
-    qc = "!f() { git stash && git um && git co -tb $1 && git stash pop && git add . && git ci -m '${1}: ${2}' -m '' -m '${3:-desc}' && git ci --amend; } ; f"
+    qc = "!f() { git stash && git um && git co -tb \"$1\" && git stash pop && git add . && git ci -m \"${1}: ${2}\" -m '' -m \"${3:-desc}\"; } ; f"
 
     empty = "!git commit -am\"[empty] Initial commit\" --allow-empty"
 
