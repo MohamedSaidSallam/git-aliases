@@ -55,7 +55,7 @@ Expanded:
 Expanded:
 
 ```bash
-!git config -l \| grep alias \| cut -c 7- \| awk -F= '{first=$1;$1=\"\";printf(\"%-12s %s\\n\",first,$0);}'"
+!git config -l \| grep ^alias \| cut -c 7- \| awk -F= '{first=$1;$1=\"\";printf(\"%-12s %s\\n\",first,$0);}'"
 ```
 
 <details>
@@ -85,17 +85,17 @@ lt            describe --tags --abbrev 0
 p             push
 po            push -u origin HEAD
 um            !(git checkout master || git checkout main) && git pull -r
-lsa-raw       !git config -l | grep alias | cut -c 7-
+lsa-raw       !git config -l | grep ^alias | cut -c 7-
 lsa           !git lsa-raw  | awk -F  '{first $1;$1 "";printf("%-12s %s\n",first,$0);}'
 lsal          !git lsa-raw  | awk -F  '{first $1;$1 "";printf("%12s %s\n",first,$0);}'
-qc            !f() { git stash && git um && git co -tb $1 && git stash pop && git add . && git ci -m '${1}: ${2}' -m '' -m '${3:-desc}' && git ci --amend; } ; f
+qc            !f() { git stash && git um && git co -tb "$1" && git stash pop && git add . && git ci -m "${1}: ${2}" -m '' -m "${3:-desc}"; } ; f
 empty         !git commit -am"[empty] Initial commit" --allow-empty
-lightclone    !echo -e '!--------------------!
+lightclone    !echo -e "!--------------------!
 lc            lightclone
 logg          log --graph --oneline --decorate
-logga         log --graph --oneline --decorate
+logga         logg --all
 lg            log --color --graph --pretty format:'%C(yellow)%h%Creset -%C(cyan)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-lga           !git lg --all
+lga           lg --all
 ```
 
 </details>
