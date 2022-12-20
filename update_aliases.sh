@@ -18,7 +18,7 @@ do
 
     quotedCommand=${line#*= }
     command=${quotedCommand:1}
-    command=${command::-2}
+    command=${command::-1}
     command=${command//\'/\\\'}
     command=${command//\\\"/\"}
     command=${command//\\n/\\\\n}
