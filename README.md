@@ -96,6 +96,7 @@ logg          log --graph --oneline --decorate
 logga         logg --all
 lg            log --color --graph --pretty format:'%C(yellow)%h%Creset -%C(cyan)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 lga           lg --all
+glsa          !git lsa  | grep
 ```
 
 </details>
@@ -108,6 +109,16 @@ Alternatives:
     ```text
           lg  log --color --graph --pretty format:'%C(yellow)%h%Creset -%C(cyan)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
          lga  '!git lol --all'
+    ```
+
+- `git glsa`: lsa with grep
+
+    ```bash
+    $ git glsa lsa
+    lsa-raw       !git config -l | grep ^alias | cut -c 7-
+    lsa           !git lsa-raw  | awk -F  '{first $1;$1 "";printf("%-12s %s\n",first,$0);}'
+    lsal          !git lsa-raw  | awk -F  '{first $1;$1 "";printf("%12s %s\n",first,$0);}'
+    glsa          !git lsa  | grep
     ```
 
 #### git qc
