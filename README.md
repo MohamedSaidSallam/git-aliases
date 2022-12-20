@@ -1,6 +1,6 @@
 # Git Aliases
 
-This is my personal git aliases I use. Some I picked up, some created and some stolen from [durdn](https://github.com/durdn/cfg/blob/master/.gitconfig) (Check him out. He has a lot of cool aliases that I don't fit my use cases but might fit yours).
+This is my personal git aliases I use. Some I picked up, some created and some stolen from [durdn](https://github.com/durdn/cfg/blob/master/.gitconfig) (Check him out. He has a lot of cool aliases that don't fit my use cases but might fit yours).
 
 Feel free to read through them in [.gitconfig](.gitconfig) (I gave a description for some of them in [#What they do?](#what-they-do)). Or go straight to [adding them](#how-to-use) to your config file.
 
