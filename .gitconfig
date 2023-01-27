@@ -12,6 +12,7 @@
     cl = "clone"
     br = "branch"
     r = "reset"
+    rs = "reset --soft"
     cp = "cherry-pick"
     gr = "grep -Ii"
 
