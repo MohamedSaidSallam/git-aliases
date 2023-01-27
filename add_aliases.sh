@@ -13,6 +13,7 @@ git config --global alias.st  $'status -sb'
 git config --global alias.cl  $'clone'
 git config --global alias.br  $'branch'
 git config --global alias.r  $'reset'
+git config --global alias.rs  $'reset --soft'
 git config --global alias.cp  $'cherry-pick'
 git config --global alias.gr  $'grep -Ii'
 
