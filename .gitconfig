@@ -30,6 +30,7 @@
     po = "push -u origin HEAD"
 
     um = "!(git checkout master || git checkout main) && git pull -r"
+    sum = "!git stash && git um & git stash pop"
 
     lsa-raw = "!git config -l | grep ^alias | cut -c 7-"
     lsa  = "!git lsa-raw  | awk -F= '{first=$1;$1=\"\";printf(\"%-12s %s\\n\",first,$0);}'"
