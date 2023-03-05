@@ -20,6 +20,7 @@
     sl = "stash list"
     sa = "stash apply"
     ss = "stash save"
+    sp = "stash pop"
 
 
     lasttag = "describe --tags --abbrev=0"
