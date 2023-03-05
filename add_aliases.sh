@@ -21,6 +21,7 @@ git config --global alias.s  $'stash'
 git config --global alias.sl  $'stash list'
 git config --global alias.sa  $'stash apply'
 git config --global alias.ss  $'stash save'
+git config --global alias.sp  $'stash pop'
 
 
 git config --global alias.lasttag  $'describe --tags --abbrev=0'
@@ -30,6 +31,7 @@ git config --global alias.p  $'push'
 git config --global alias.po  $'push -u origin HEAD'
 
 git config --global alias.um  $'!(git checkout master || git checkout main) && git pull -r'
+git config --global alias.sum  $'!git stash && git um & git stash pop'
 
 git config --global alias.lsa-raw  $'!git config -l | grep ^alias | cut -c 7-'
 git config --global alias.lsa   $'!git lsa-raw  | awk -F= \'{first=$1;$1="";printf("%-12s %s\\n",first,$0);}\''
